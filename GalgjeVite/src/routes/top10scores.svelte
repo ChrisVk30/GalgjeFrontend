@@ -1,12 +1,12 @@
 <script lang="ts">
-
+  import type { ScoreSetup } from '../lib/ScoreConfig'
   async function fetchData() {
     const res = await fetch(`https://localhost:52916/api/scores/top10scores`)
-    const data = await res.json();                       
+    const data : ScoreSetup[] = await res.json();                       
     return data;
   };
 
-  let columns = ["Username", "Time", "Characters of word guessed"]
+  let columns : string[] = ["Username", "Time", "Characters of word guessed"]
 
 </script>
 

@@ -2,12 +2,15 @@
     import { push } from 'svelte-spa-router'
     import { onMount } from "svelte";
     import type { GameSetup } from '../lib/GameConfig'
+    import type { ParamsSetup } from '../lib/ParamsConfig'
 
     onMount(async function () {
 		fetch(`https://localhost:52916/api/game/${Id}`)
 			.then((x) => x.json())
 			.then((game) => {
+                console.log(game);
                 currentGame = game;
+                console.log(currentGame);
                 if (currentGame.status === 1) {
                     push('/won');
                 }
@@ -16,7 +19,7 @@
                 }
                 src = `./images/hangman_phase${currentGame.incorrectGuesses}.jpg`
 			});
-    });
+        });
 
     let guessLetter = () => {
         fetch(`https://localhost:52916/api/guess/${Id}/guessletter`, {
@@ -33,11 +36,15 @@
 			});
 	};
 
-    export let params : object = {};
+    
+
+    export let params : ParamsSetup;
     export let Id : number = params.id;
     export let currentGame : GameSetup = {};
     export let src = ``;
     export let Letter : string;
+
+    
 
 </script>
 

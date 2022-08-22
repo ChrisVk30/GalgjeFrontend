@@ -1,4 +1,4 @@
-export interface GameSetup {
+export class GameSetup {
     chosenLetters: string;
     guessedWord: string;
     id: number;

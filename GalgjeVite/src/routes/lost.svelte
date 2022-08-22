@@ -1,10 +1,13 @@
 <script lang="ts">
     import { push } from "svelte-spa-router";
-</script>
-<p>
+
+    export const loseMessage : string = `
     You ran out of tries! 
 
     Try again next time!
+    `
+</script>
+<p> {loseMessage}
 </p>
 
 

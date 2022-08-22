@@ -1,7 +1,7 @@
 <script lang="ts">
 
     async function fetchData() {
-      const res = await fetch(`https://localhost:52916/api/words`)
+      const res = await fetch(`https://localhost:52916/api/words`);
       const data = await res.json();                       
       return data;
     };
@@ -17,7 +17,7 @@
         .then(() => location.reload());
     }
 
-    let columns = ["Word"]
+    let columns : string[] = ["Words available in the game"];
     let Value : string;
   
 </script>

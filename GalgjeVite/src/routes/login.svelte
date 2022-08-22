@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { push } from 'svelte-spa-router';
-
+	import type { GameSetup } from '../lib/GameConfig'
 	let Username: string;
 
 	const start = () => {
@@ -12,10 +12,12 @@
 			body: JSON.stringify({ Username })
 		})
 			.then((x) => x.json())
-			.then((game) => {
+			.then((game : GameSetup ) => {
 				push(`/game/${game.id}`);
 			});
 	};
+
+	
 </script>
 
 <h3>Choose a username to play a game</h3>

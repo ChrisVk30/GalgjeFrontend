@@ -1,3 +1,5 @@
+
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -27,10 +29,16 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+nav{
+  background: indigo; padding: 10px; font-size:20px; top: 0px; min-width: 100%; 
+}
+a {
+  color:white; margin: 0px 20px 0px 20px;
 }
 
 h1 {
@@ -45,23 +53,25 @@ h1 {
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 4px 6px 4px 6px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #95d2d4;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 10px;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #000aca;
+  color: white;
 }
 button:focus,
 button:focus-visible {
@@ -76,7 +86,21 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+table {
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+tr {
+  background-color: coral;
+  color: white
+}
+th, td {
+  padding: 5px 10px 5px 10px;
+}
+td {
+  background-color: lightblue;
+  color: black;
 }
