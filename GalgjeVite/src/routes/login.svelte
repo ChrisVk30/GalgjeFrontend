@@ -4,7 +4,7 @@
 	let Username: string;
 
 	const start = () => {
-		fetch('https://localhost:52916/api/game/creategame', {
+		fetch('https://localhost:52916/api/game', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

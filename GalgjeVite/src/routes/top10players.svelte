@@ -8,6 +8,8 @@
 
   let columns : string[] = ["Username", "% Words Guessed Correctly", "# Words Guessed"]
 
+  let sortBy = {col: "% Words Guessed Correctly", descending: true};
+
 </script>
 
 

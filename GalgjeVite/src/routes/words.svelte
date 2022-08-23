@@ -12,20 +12,20 @@
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({ Value })
+			body: JSON.stringify({ value })
 		})
         .then(() => location.reload());
     }
 
     let columns : string[] = ["Words available in the game"];
-    let Value : string;
+    let value : string;
   
 </script>
   
   
 <form on:submit|preventDefault={addWord}>
     <label for="input-word">Word: </label>
-    <input id="input-word" bind:value={Value} required/>
+    <input id="input-word" bind:value={value} required/>
     <button>Add word!</button>
 </form> 
 
